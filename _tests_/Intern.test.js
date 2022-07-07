@@ -1,11 +1,11 @@
 const Intern = require('../lib/Intern'); 
-const intern = new Intern('joe', '110044', 'joe@mama.com', 'UTSA')
+const intern = new Intern('joe', '110044', 'joe@star.com', 'UTSA')
 
 // test for the Intern object 
 test(' test if we can get the values for the intern object', () => {
     expect(intern.name).toBe('joe');
     expect(intern.id).toBe('110044');
-    expect(intern.email).toBe('joe@mama.com');
+    expect(intern.email).toBe('joe@star.com');
     expect(intern.school).toBe('UTSA');
 }); 
 
@@ -21,7 +21,7 @@ test('test if we can get the objects from the getId() mathod', () => {
 
 // test for the getEmail() method 
 test('test if we can get the objects from the getEmail() mathod', () => {
-    expect(intern.getEmail()).toBe('joe@mama.com'); 
+    expect(intern.getEmail()).toBe('joe@star.com'); 
 })
 
 //test for the getSchool() method 

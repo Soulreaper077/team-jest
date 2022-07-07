@@ -1,10 +1,10 @@
 const Manager = require('../lib/Manager'); 
-const manager = new Manager('joe', '110044', 'joe@mama.com', '123'); 
+const manager = new Manager('joe', '110044', 'joe@star.com', '123'); 
 
 test('testing the constructor values for manager object', () => {
     expect(manager.name).toBe('joe');
     expect(manager.id).toBe('110044'); 
-    expect(manager.email).toBe('joe@mama.com');
+    expect(manager.email).toBe('joe@star.com');
     expect(manager.officeNumber).toBe('123'); 
 });
 
@@ -20,7 +20,7 @@ test(' test if we can get the id from the getId() method', () => {
 
 // test for the getEmail() method 
 test(' test if we can get the email from the getEmail() method', () => {
-    expect(manager.getEmail()).toBe('joe@mama.com'); 
+    expect(manager.getEmail()).toBe('joe@star.com'); 
 }); 
 
 // test for the getOfficeNumber() method 

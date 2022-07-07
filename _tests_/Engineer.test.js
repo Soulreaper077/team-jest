@@ -1,10 +1,10 @@
 const Engineer = require('../lib/Engineer');
-const engineer = new Engineer('joe', '110044', 'joe@mama.com', 'Github'); 
+const engineer = new Engineer('joe', '110044', 'joe@star.com', 'Github'); 
 // test if we can get the values from the employee object 
 test('test if we can get the values from the employee object', () => {
     expect(engineer.name).toBe('joe');
     expect(engineer.id).toBe('110044');
-    expect(engineer.email).toBe('joe@mama.com');
+    expect(engineer.email).toBe('joe@star.com');
     expect(engineer.github).toBe('Github')
 })
 
@@ -20,7 +20,7 @@ test('test if we can get the id from the getId() method ', () => {
 
 //test getEmail() method 
 test('test if we can get the email from the getEmail() method', () => {
-    expect(engineer.getEmail()).toBe('joe@mama.com'); 
+    expect(engineer.getEmail()).toBe('joe@star.com'); 
 }); 
 
 // test the getGithub() method 
