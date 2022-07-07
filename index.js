@@ -4,7 +4,6 @@ const generateHTML = require('./generateHTML');
 const Manager = require('./lib/Manager'); 
 const Intern = require('./lib/Intern'); 
 const Engineer = require('./lib/Engineer');
-
 const teamMemebers = []; 
 // prompt the set of questions for the manager 
 const promptManager = () => {
