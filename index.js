@@ -6,7 +6,7 @@ const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
 
 const teamMemebers = []; 
-
+// prompt the set of questions for the manager 
 const promptManager = () => {
     return inquirer.prompt([
         {
@@ -60,12 +60,12 @@ const promptManager = () => {
                     return false; 
                 }
             } 
-        }, 
+        },  // end of the manager questions 
     ]) .then(data => {
-        console.log(data); 
+        //console.log(data); 
         const manager = new Manager(data.name, data.employeeId, data.email, data.officeNumber);
-        teamMemebers.push(manager); 
-        menu(); 
+        teamMemebers.push(manager); // push the new manager into the team members array 
+        menu(); // prompt the meu function 
     })
 }
 
@@ -77,20 +77,20 @@ const menu = () => {
             message: 'would you like to add anything else?',
             choices: ['add engineer', 'add intern', 'finish']
         }])
-        .then(userChoice => {
+        .then(userChoice => {  // adding a switch statement to filter through the choices 
             switch (userChoice.menu) {
-                case 'add engineer':
-                    promptEngineer(); 
+                case 'add engineer': // if they choose eignieer 
+                    promptEngineer(); // prompt the engineer questions 
                     break;
-                case 'add intern':
-                    promptIntern();
+                case 'add intern': // if they chose intern 
+                    promptIntern(); // prompt the intern questions 
                     break;
-                default:
-                    genPage();         
+                default: // default of none of these cases are chosen 
+                    genPage(); // generate the team html page     
             }
         }); 
 };
-
+// prompted questions for the engineer employee 
 const promptEngineer = () => {
     console.log('add an enginner');
     return inquirer.prompt([
@@ -145,15 +145,15 @@ const promptEngineer = () => {
                 }
             }
         }
-
+        // end of the engineer questions 
     ]).then(data => {
-        console.log(data); 
+        //console.log(data); 
         const enginner = new Engineer(data.name, data.employeeId, data.email, data.githubUsername);
-        teamMemebers.push(enginner); 
-        menu(); 
+        teamMemebers.push(enginner); // pushing new engineer to the array 
+        menu(); // prompt menu function 
     })
 }; 
-
+// prompt the questions for the intern employee 
 const promptIntern = () => {
     console.log('add an intern');
     return inquirer.prompt([
@@ -209,19 +209,19 @@ const promptIntern = () => {
                 }
             }
         }
-
+        // end of the intern questions 
     ]).then(data => {
         console.log(data); 
         const intern = new Intern(data.name, data.employeeId, data.email, data.school);
-        teamMemebers.push(intern); 
-        menu(); 
+        teamMemebers.push(intern); // push new intern into the array 
+        menu(); // prompt the menu 
     })
 }; 
-
+// function in order to generate the page with the employees 
 const genPage = () => {
-    const saveData = generateHTML(teamMemebers);
-    fs.writeFileSync('team.html', saveData)
-    console.log('Your team has been built! ')
+    const saveData = generateHTML(teamMemebers); // pushing the team members into the genrate page 
+    fs.writeFileSync('team.html', saveData) // writing the html wile with the saved data 
+    console.log('Your team has been built! ') 
 }
 
-promptManager(); 
+promptManager(); // first prompt 
