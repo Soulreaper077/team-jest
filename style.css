@@ -1,0 +1,56 @@
+* {
+    float: center; 
+    justify-content: center;
+}
+header {
+    border: 2px solid darkcyan; 
+    background-color: rgb(42, 126, 126);
+    display: flex;
+}
+h1 {
+    color:white; 
+    padding: 30px; 
+    border: lightgreen; 
+    align-items: center;
+}
+
+main {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+i {
+    color: darkgray; 
+}
+
+.card {
+    padding: 20px; 
+    border: lightseagreen 3px outset ;
+    margin: 20px; 
+    background-color: snow;
+    
+}
+
+.card-header {
+    font-size: 30px;
+    color: whitesmoke; 
+    border: 2px solid darkcyan; 
+    background-color: lightseagreen;
+    align-items: center;
+    padding: 10px; 
+    
+}
+
+.list-group {
+    
+    justify-content: center;
+    padding: 10px; 
+    height: 30%; 
+}
+
+li {
+    border: 2px double rgb(16, 134, 134); 
+    padding: 10px; 
+    
+    font-size: 20px;
+}
