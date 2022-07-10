@@ -219,7 +219,7 @@ const promptIntern = () => {
 // function in order to generate the page with the employees 
 const genPage = () => {
     const saveData = generateHTML(teamMemebers); // pushing the team members into the genrate page 
-    fs.writeFileSync('team.html', saveData) // writing the html wile with the saved data 
+    fs.writeFileSync('./dist/team.html', saveData) // writing the html wile with the saved data 
     console.log('Your team has been built! ') 
 }
 
